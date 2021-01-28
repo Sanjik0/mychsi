@@ -91,7 +91,7 @@
     display: inline-block;
     background: #623266;
     border-radius: 10px;
-    padding: 5px 8px;
+    padding: 10px 8px;
     outline: none;
     white-space: nowrap;
     -webkit-user-select: none;
@@ -112,7 +112,11 @@
 .wrapper.style3:before{
     background-color: #FAFAFA;
 }
-.form-container input{
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="password"],
+.form-container input[type="email"],
+.form-container input[type="date"] {
     background: #ffffff !important;
     border: 1px solid #6AB1F9 !important;
     border-radius: 10px !important;
@@ -166,6 +170,17 @@
     margin-right: 20px !important;
 }
 
+.personal-fields .personal-fields__wrap select,
+.edu-fields .edu-fields__wrap select {
+    color: #A19DA6;
+}
+
+.personal-fields .personal-fields__wrap input,
+.edu-fields .edu-fields__wrap input {
+    color: #A19DA6;
+}
+
+
 .documents-fields {
     display: inline-block !important; 
     width: 60% !important;
@@ -179,7 +194,7 @@
 .documents-fields .documents__wrap .documents__wrap__inner {
     display: flex !important;  
     border: 1px solid #623266 !important; 
-    border-radius: 15px !important; 
+    border-radius: 25px !important; 
     padding: 20px !important; 
     height: 65px !important;
 } 
@@ -200,9 +215,9 @@
     border: 0 !important; 
     border-radius: 10px !important; 
     width: 110px !important; 
-    height: 35px !important; 
+    height: 40px !important; 
     position: relative !important; 
-    top: -5px !important;
+    top: -8px !important;
 }
 
 .documents-avatar {
@@ -574,4 +589,98 @@ h1 {
 
 .about-two .about-section img {
     width: 65% !important;
+}
+
+.site-header__middle {
+    margin: 0 auto;
+}
+
+.site-header{
+    border-bottom: 1px solid #FAFAFA;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.position-pusher {
+    height: 212px;
+}
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+     background: #2c3e50 ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    z-index:999999; /* makes sure it stays on top */
+}
+
+#status {
+    width:50px;
+    height:30px;
+    position:fixed;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+   margin:-25px 0 0 -15px; /* is width and height divided by two */
+}
+
+.spinner {
+  margin: 0px auto;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #fff;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
 }

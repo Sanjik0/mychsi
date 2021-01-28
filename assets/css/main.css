@@ -111,10 +111,17 @@ body {
 
 .menu_2 a{
 	padding: 0 !important;
+	position: relative;
 }
 
-.menu_2 a:hover{
-	border-bottom: 1px solid;
+.menu_2 a:hover::after {
+	content: '';
+	height: 1px;
+	width: -webkit-fill-available;
+	left: 0;
+	bottom: 0;
+	background: #000;
+	position: absolute;
 }
 
 .pdn_0_5{
@@ -2132,6 +2139,7 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="date"],
 select,
 textarea {
 	-moz-appearance: none;
@@ -2151,7 +2159,8 @@ textarea {
 
 input[type="text"]:invalid,
 input[type="password"]:invalid,
-input[type="email"]:invalid,
+input[type="email"]:invalid
+input[type="date"]:invalid,
 select:invalid,
 textarea:invalid {
 	box-shadow: none;
@@ -2192,6 +2201,7 @@ textarea:invalid {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="date"],
 select {
 	height: 2.75rem;
 }
@@ -2291,6 +2301,7 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="date"],
 select,
 textarea {
 	background: rgba(144, 144, 144, 0.075);
@@ -3132,6 +3143,7 @@ table.alt tbody tr td {
 .wrapper.style2 input[type="text"],
 .wrapper.style2 input[type="password"],
 .wrapper.style2 input[type="email"],
+.wrapper.style2 input[type="date"],
 .wrapper.style2 select,
 .wrapper.style2 textarea {
 	background: rgba(0, 0, 0, 0.075);
@@ -3363,6 +3375,7 @@ table.alt tbody tr td {
 .wrapper.style3 input[type="text"],
 .wrapper.style3 input[type="password"],
 .wrapper.style3 input[type="email"],
+.wrapper.style3 input[type="date"],
 .wrapper.style3 select,
 .wrapper.style3 textarea {
 	background: rgba(255, 255, 255, 0.075);
@@ -3372,6 +3385,7 @@ table.alt tbody tr td {
 .wrapper.style3 input[type="text"]:focus,
 .wrapper.style3 input[type="password"]:focus,
 .wrapper.style3 input[type="email"]:focus,
+.wrapper.style3 input[type="date"]:focus,
 .wrapper.style3 select:focus,
 .wrapper.style3 textarea:focus {
 	border-color: #8a4680;

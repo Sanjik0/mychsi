@@ -26,7 +26,7 @@
 						</div>
 
 						<div class="personal-fields__wrap">
-							<input type="email" class="form-control" id="email-field" name="email-field" placeholder="Surname" required>
+							<input placeholder="Birthday" class="textbox-n" type="text" onfocus="(this.type='date')" id="birthday" required>
 						</div>
 
 						<div class="personal-fields__wrap">
@@ -55,7 +55,7 @@
 						</div>
 
 						<div class="personal-fields__wrap">
-							<input type="email" class="form-control" id="email-field" name="email-field" placeholder="Phone number" required>
+							<input type="email" class="form-control" id="email-field" name="email-field" placeholder="Phone number (+country code)" required>
 						</div>
 					</div>
 				</form>
@@ -106,14 +106,7 @@
 						</div>
 
 						<div class="edu-fields__wrap">
-							<select class="form-control" name="subject-field" onchange="changeSubject(event)"  required>
-								<option>Date</option>
-								<option value="Consulting">Kazakhstan</option>
-								<option value="Web Development">Russia</option>
-								<option value="Google Scripts">China</option>
-								<option value="G Suite for Education">Uzbekistan</option>
-								<option value="Other">Kyrgyzstan</option>
-							</select>
+							<input placeholder="Graduation year" class="textbox-n" type="text" onfocus="(this.type='date')" id="date" required>
 						</div>
 					</div>
 
@@ -174,10 +167,11 @@
 
 					<div class="documents-avatar">
 						<div class="documents-avatar__wrap">
-							<div class="documents-avatar__area"></div>
+							<div class="documents-avatar__area">
+							</div>
 							<div>
 								<div class="documents-avatar__area__mini"></div>
-								<p class="documents-avatar__info">example<br>Background color must be like in example<br>Background color: #26A9ED</p>
+								<p class="documents-avatar__info">example<br>Background color must be like in example</p>
 								<button class="documents-avatar__btn" type="button">Upload</button>
 							</div>
 						</div>
