@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+	ob_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -36,11 +41,17 @@
 						<ul class="nav__wrapper">
 							<li class="nav__item menu_3"><a href="#">中文版</a></li>
 							<li class="nav__item menu_3"><a href="#">English</a></li>
+
+							<?php if(isset($_SESSION['logged_user'])) : ?>
+							<li class="nav__item menu_3"><a href="../modules/logout.php">Log out</a></li>
+
+							<?php else : ?>
 							<li class="nav__item menu_3"><a href="signin.html">Sign In</a></li>
 							<li class="nav__item__line">
 								<a href="#">|</a>
 							</li>
 							<li class="nav__item menu_3"><a href="signup.html">Sign Up</a></li>
+							<?php endif; ?>
 						</ul>
 					</div>
 				</div>
